@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Movie Search</title>
+	<meta charset="utf8" />
+	<link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+	<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="app.js"></script>
+	<script src="jqueryUI/external/jquery/jquery.js"></script>
+	<script src="jqueryUI/jquery-ui.min.js"></script>
+</head>
+
+<body class="full-background">
+<div id="search-again-box">
+	<a id="search-again" class="btn btn-primary" href="index.html">Search Again?</a>
+</div>
+<div id="container"></div>
+
+<!--Home Page-->
+<div id="search-input-box" class="border-radius">
+	<form id="get-movie-form" action="">
+		<h2 class="txt-center">Search for Films</h2>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<input id="movie-title" class="form-control" type="text" placeholder="Movie Title" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12 txt-center">
+				<button id="movie-search-button" type="submit" class="btn btn-primary margin-top-20">Search</button>
+			</div>
+		</div>
+	</form>
+</div>
+<!--/Home Page-->
+
+<div id="movie-card-container"></div>
+
+<!--Movie Cards-->
+<script id="movie-template" type="text/x-handlebars-template">
+<div class="movie-card border-radius margin-top-20" style="display:none;">
+	<div class="row">
+		<div class="col-sm-4">
+			<img src="{{Poster}}" class="img-responsive movie-poster" />
+		</div>
+		<div class="col-sm-8">
+			<h3 style="margin-top:0;">{{Title}}</h3>
+
+			<div class="row margin-top-20">
+				<div class="col-sm-4">
+					<strong>Year: </strong>{{Year}}
+				</div>
+				<div class="col-sm-4">
+					<strong>Rated: </strong>{{Rated}}
+				</div>
+				<div class="col-sm-4">
+					<strong>Released: </strong>{{Released}}
+				</div>
+			</div>
+
+			<div class="row margin-top-20">
+				<div class="col-sm-4">
+					<strong>Runtime: </strong>{{Runtime}}
+				</div>
+				<div class="col-sm-4">
+					<strong>Genre: </strong>{{Genre}}
+				</div>
+				<div class="col-sm-4">
+					<strong>Director: </strong>{{Director}}
+				</div>
+			</div>
+
+			<div class="row margin-top-20">
+				<div class="col-sm-12">
+					<strong>Actors: </strong>{{Actors}}
+				</div>
+			</div>
+
+			<div class="row margin-top-20">
+				<div class="col-sm-12">
+					<strong>Plot: </strong>{{Plot}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--/Movie Cards-->
+</script>
+</body>
+
+</html>
